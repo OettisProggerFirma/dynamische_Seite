@@ -1,0 +1,50 @@
+body {
+    width: 960px;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+#kopf {
+    border: dashed 1px;
+    width: 960px;
+    height: 50px;
+    padding-left: 5px;
+    background-color: lightgrey;
+}
+
+#nav {
+    border: dashed 1px;
+    width: 200px;
+    height: 250px;
+    float: left;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    background-color: moccasin;
+}
+
+#inhalt {
+    border: dashed 1px;
+    width: 740px;
+    height: 450px;
+    float: left;
+    padding-left: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    background-color: beige;
+}
+
+#fuss {
+    border: dashed 1px;
+    width: 960px;
+    height: 50px;
+    clear: left;
+    padding-left: 5px;
+    background-color: lightgrey;
+}
+
+#mitte {
+    margin-top: 10px;
+    background-color: lightslategrey;
+}
