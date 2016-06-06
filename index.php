@@ -3,6 +3,8 @@ $pages = [
     'home.php' => 'Home',
     'fakultaet.php' => 'Fakultaet',
 ];
+//error_reporting(0);
+
 ?>
 
 <!DOCTYPE html>

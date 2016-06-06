@@ -8,8 +8,9 @@
 <body>
 <?php
 if(isset($_GET['name'])) {
-    require './Inhalte/'.$_GET['name'];
-
+    if(isset($pages[$_GET['name']])) {
+        require './Inhalte/' . $_GET['name'];
+    } else require './Inhalte/home.php';
 } else {
     require './Inhalte/home.php';
 }

@@ -2,7 +2,9 @@
     Navigation
     <?php
     echo '<ul>';
+
     if (isset($_GET['name'])) {
+    
         foreach ($pages as $datei => $name) {
             if ($_GET['name'] == $datei) {
                 echo '<li>';
