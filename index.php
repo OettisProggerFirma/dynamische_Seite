@@ -1,7 +1,7 @@
 <?php
 $pages = [
-    'Home'=> 'home.php',
-    'Fakultät'=> 'fakultaet.php',
+    'home.php' => 'Home',
+    'fakultaet.php' => 'Fakultaet',
 ];
 ?>
 
