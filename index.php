@@ -3,8 +3,13 @@ $pages = [
     'home.php' => 'Home',
     'fakultaet.php' => 'Fakultaet',
 ];
-//error_reporting(0);
 
+if (isset($_GET['name'])&&isset($pages[$_GET['name']])) {
+    $seite = $_GET['name'];
+
+} else {
+    $seite = './Inhalte/home.php';
+}
 ?>
 
 <!DOCTYPE html>
