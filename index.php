@@ -1,10 +1,12 @@
+<!--todo Forschleife kürzen-->
+
 <?php
 $pages = [
     'home.php' => 'Home',
     'fakultaet.php' => 'Fakultaet',
 ];
 
-if (isset($_GET['name'])&&isset($pages[$_GET['name']])) {
+if (isset($_GET['name']) && isset($pages[$_GET['name']])) {
     $seite = $_GET['name'];
 
 } else {
