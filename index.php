@@ -1,10 +1,14 @@
 <?php
 $pages = [
-    'home.php' => 'Home',
-    'fakultaet.php' => 'Fakultaet',
+    'home' => 'Home',
+    'fakultaet' => 'Fakultät',
+    'db_unterricht' => 'Datenbank_Unterricht'
 ];
 //error_reporting(0);
-
+$seite = 'home';
+if (isset($_GET['name']) && isset($pages[$_GET['name']])) {
+    $seite = $_GET['name'];
+}
 ?>
 
 <!DOCTYPE html>
