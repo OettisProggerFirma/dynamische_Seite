@@ -2,7 +2,8 @@
 $pages = [
     'home' => 'Home',
     'fakultaet' => 'Fakultät',
-    'db_unterricht' => 'Datenbank_Unterricht'
+    'db_unterricht' => 'Datenbank_Unterricht',
+    'Personensuche' =>'Personensuche'
 ];
 //error_reporting(0);
 $seite = 'home';
@@ -19,7 +20,6 @@ if (isset($_GET['name']) && isset($pages[$_GET['name']])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <?php
 echo '<div id="kopf">';
 require 'head.php';

@@ -13,9 +13,6 @@ echo "<table>\n";
 echo '<th>' . 'Vorname' . '</th>' . '<th>' . 'Nachname' . '</th>';
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "\t<tr>\n";
-//    foreach ($line as $col_value) {
-//        echo "\t\t<td>$col_value</td>\n";
-//    }
 
     echo '<td>' . $line['vorname'] . '</td>' . '<td>' . $line['nachname'] . '</td>';
 

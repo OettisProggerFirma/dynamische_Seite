@@ -7,7 +7,7 @@ if (isset($_GET['zahl'])) {
 
     <form>
         <input type="number" placeholder="Zahl" name="zahl" value="<?= $zahl ?>">
-        <button type="submit">Fakultät berechnen</button>
+        <button type="submit" name="name" value="fakultaet">Fakultät berechnen</button>
     </form>
 
 <?php
