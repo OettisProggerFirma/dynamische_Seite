@@ -28,15 +28,16 @@ if (isset($_GET['person'])) {
     $query = "SELECT * FROM t_kunde WHERE NACHNAME ='$person'";
 
     $result = pg_query($query) or die('Abfrage fehlgeschlagen: ' . pg_last_error());
-    $erg = pg_fetch_array($result, null, PGSQL_ASSOC);
 
-    echo "<table>\n";
-    foreach ($erg as $key => $value) {
-        echo "\t<tr>\n";
-        echo '<td>' . ucfirst($key) . ': ' . '</td><td>' . $value . '</td>';
-        echo "\t</tr>\n";
+    while ($erg = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+        echo '<table>';
+        foreach ($erg as $key => $value) {
+            echo '<td>' . ucfirst($key) . ': ' . '</td><td>' . $value . '</td>';
+            echo '</tr>';
+        }
+        echo '</table>';
+
     }
-    echo "</table>\n";
     pg_free_result($result);
     pg_close($dbconn);
 }
