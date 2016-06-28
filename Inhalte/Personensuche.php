@@ -5,7 +5,7 @@ if (isset($_GET['person'])) {
     $person = $_GET['person'];
 }
 $kunden = "Select nachname from t_kunde";
-$ergebnis = pg_query_params($dbconn,$kunden,array()) or die('Abfrage fehlgeschlagen: ' . pg_last_error());
+$ergebnis = pg_query_params($dbconn, $kunden, array()) or die('Abfrage fehlgeschlagen: ' . pg_last_error());
 ?>
 <form>
 
@@ -25,9 +25,9 @@ $ergebnis = pg_query_params($dbconn,$kunden,array()) or die('Abfrage fehlgeschla
 <?php
 if (isset($_GET['person'])) {
 
-    $query = "SELECT * FROM t_kunde WHERE NACHNAME ='$person'";
+    $query = "SELECT * FROM t_kunde WHERE NACHNAME =$1 or vorname=$1";
 
-    $result = pg_query_params($dbconn,$query,array()) or die('Abfrage fehlgeschlagen: ' . pg_last_error());
+    $result = pg_query_params($dbconn, $query, [$person]) or die('Abfrage fehlgeschlagen: ' . pg_last_error());
 
     while ($erg = pg_fetch_array($result, null, PGSQL_ASSOC)) {
         echo '<table>';
